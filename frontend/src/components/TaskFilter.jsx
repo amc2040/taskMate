@@ -7,7 +7,7 @@ export default function TaskFilter({ filter, setFilter }){
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
           >
-            <option value="all></option>
+            <option value="all"></option>
             <option value="todo">todo</option>
             <option value="done">done</option>
         </select>
