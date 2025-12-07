@@ -1,5 +1,5 @@
 import{useState} from "react";
-export default functin TaskForm({onAddTask}){
+export default function TaskForm({onAddTask}){
   const[title, setTitle] = useState("");
   const handleSubmit = (e) =>{
     e.preventDefault();
