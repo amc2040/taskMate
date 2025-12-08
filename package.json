@@ -1,0 +1,13 @@
+#file that runs frontend and backend simultaniously
+{
+  "name": "taskmate",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run frontend\"",
+    "server": "nodemon backend/server.js",
+    "frontend": "live-server frontend --port=5500"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
