@@ -1,0 +1,18 @@
+Overview of first part of tack (Dylan)
+
+Alright so now I am going to go over the first portion of our tech stack and show how we put this app together.
+We picked React to make our app because it gives us an easy way to manage the app's state and it keeps everything organized.
+We broke down the app into many different parts and each component manages a single piece of the functionality. 
+The primary file is called App.js, and this is where we have the bulk of the app's logic.
+Here is where we use React's useState hook to hold our tasks. 
+Any time we add a new task, toggle a task, or change what tasks are shown, App.js will update the state of the app, and then the user interface will re-render. 
+We had another component called TaskForm, which let users enter a task and submit it to the task list. 
+This helps to break the app up into smaller modules, and makes it easier to manage and fix bugs.
+Next is TaskList, which has the responsibility of displaying the entire list of tasks. 
+TaskList utilizes the TaskItem component to render each task. 
+TaskItem has a checkbox inside of it, which allows the user to switch the task from 'to-do' to 'done,' or vice versa.
+We also included a TaskFilter component, which uses a dropdown to allow the user to decide what tasks they want to see. 
+The filter is also managed by App.js.
+In general, we used nothing but React, and its most basic features such as components and state, to create the front-end of the app.
+
+
