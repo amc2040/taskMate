@@ -27,7 +27,7 @@ return(
     <h1>taskMate</h1>
     <TaskForm onAddTask={handleAddTask}/>
     <TaskFilter filter={filter} setFilter={setFilter}/>
-    <TaskList tasks={filteredTasks} onToggleDone={handdleToggleDone}/>
+    <TaskList tasks={filteredTasks} onToggleDone={handleToggleDone}/>
   </div>
  );
 }
