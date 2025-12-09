@@ -5,7 +5,7 @@ export default function TaskForm({onAddTask}){
     e.preventDefault();
     if(title.trim() === "") return;
     const newTask = {
-      id:
+      id: Date.now(),
       title: title.trim(),
       status: "todo",
     };
