@@ -20,7 +20,7 @@ const handleToggleDone = (id) =>{
 };
 const filteredTasks = tasks.filter((task) =>{
   if(filter === "all") return true;
-  return task.stauts === filter;
+  return task.status === filter;
 });
 return(
   <div>
