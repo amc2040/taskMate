@@ -1,18 +1,21 @@
 Overview of first part of tack (Dylan)
 
-Alright so now I am going to go over the first portion of our tech stack and show how we put this app together.
-We picked React to make our app because it gives us an easy way to manage the app's state and it keeps everything organized.
-We broke down the app into many different parts and each component manages a single piece of the functionality. 
-The primary file is called App.js, and this is where we have the bulk of the app's logic.
-Here is where we use React's useState hook to hold our tasks. 
-Any time we add a new task, toggle a task, or change what tasks are shown, App.js will update the state of the app, and then the user interface will re-render. 
-We had another component called TaskForm, which let users enter a task and submit it to the task list. 
-This helps to break the app up into smaller modules, and makes it easier to manage and fix bugs.
-Next is TaskList, which has the responsibility of displaying the entire list of tasks. 
-TaskList utilizes the TaskItem component to render each task. 
-TaskItem has a checkbox inside of it, which allows the user to switch the task from 'to-do' to 'done,' or vice versa.
-We also included a TaskFilter component, which uses a dropdown to allow the user to decide what tasks they want to see. 
-The filter is also managed by App.js.
-In general, we used nothing but React, and its most basic features such as components and state, to create the front-end of the app.
-
-
+Alright so now I am going to go over the first portion of our tech stack and provide an overview of how we put the app together.
+We used React for the app because it makes it very easy to divide the app into smaller parts (called components) so we didin't have to try to handle every single piece of the app in one file.
+The breaking down of the logic into smaller components helped with the organization and reduced the complexity of the code we had to work with.
+React will automatically update the User Interface when the application state changes, so if a new task is added to the list, or a task is deleted, or a task is checked off (or un-checked), then React will automatically render the screen for us.
+We wanted to keep the app simple and maintainable, so we broke up the functionality into a couple of major components.
+First, there is App.js, which is where all of the overall logic is stored. 
+This is where we are utilizing React’s useState hook to store all of our tasks. 
+Anytime a task is either added, or toggled from “to-do” to “done”, then App.js is updating the state, and the entire user interface is being updated instantly.
+Next, we have the TaskForm component. It is where the users can enter a new task, and submit it.
+We have kept the logic of the input form separate from all of the other functionality of the app.
+Then we have TaskList. It is the component that is rendering all of the tasks at this moment. 
+TaskList is depending upon another small component called TaskItem. TaskItem is rendering each of the individual tasks, and includes the check box that the user uses to toggle the status of the task.
+Lastly, we created the TaskFilter component. It is a simple drop-down menu that the user can utilize to determine whether they would like to view all tasks, only “to-do” tasks, or only the completed ones. 
+TaskFilter also utilizes App.js to manage the filter selections.”
+“The use of React Components affords us many benefits. First, it keeps the code clean and organized. Each component is only concerned with a single aspect of the application. 
+Second, it greatly simplifies the maintenance of the app. If a single component fails, then we only need to repair that one component.
+Third, each component has a distinct role, which ensures that the entire system remains simple, easy to learn, and predictable.
+In general, we were able to build the entire front-end of the app with only React and its simplest features: components, and state.
+That was sufficient to produce a fully functional, easy to understand task management app.”
