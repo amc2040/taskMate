@@ -16,4 +16,4 @@ app.use('/api/tasks', taskRoutes);
 app.use(notFound);
 app.use(errorHandler);
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);});
+  console.log(`Server running on port ${PORT}`);
