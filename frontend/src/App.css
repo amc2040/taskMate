@@ -1,1 +1,112 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+.task-form{
+  display: flex;
+  gap:  10px;
+  margin-bottom: 16px;
+}
+
+.task-form input[type="text"]{
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+.task-form button{
+  padding: 10px 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: lightblue;
+  color: white;
+  cursor: pointer;
+}
+
+.task-form button:hover{
+  background-color: blue;
+}
+
+.task-filter{
+  margin-bottom: 16px;
+}
+
+.task-filter label{
+  font-size: 16px;
+}
+
+.task-filter select{
+  margin-left: 8px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+}
+
+.task-list{
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px 0;
+}
+
+.task-item{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+
+.task-item input[type="checkbox"]{
+  width: 15px;
+  height: 15px;
+}
+
+.task-item strong{
+  margin-right: 6px;
+}
+
+.status{
+  font-size: 13px;
+  color: gray;
+}
+
+.task-item.done{
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.progress-tracker{
+  margin-top: 16px;
+  padding: 10px 12px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+}
+
+.progress-tracker h2{
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+.progress-tracker p{
+  margin: 4px 0;
+  font-size: 15px;
+}
+
+
+
+
+
+
 
