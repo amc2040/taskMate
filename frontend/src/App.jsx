@@ -87,10 +87,8 @@ export default function App() {
     }
   };
 
-  const handleToggleDone = async (id) => {
+  const handleToggleDone = async (id, newStatus) => {
     try {
-      const task = tasks.find((t) => t._id === id);
-      const newStatus = task.status === "done" ? "todo" : "done";
       const response = await axios.put(`${API_URL}/${id}`, { status: newStatus });
       setTasks((prev) =>
         prev.map((t) => (t._id === id ? response.data : t))
