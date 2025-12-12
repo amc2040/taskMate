@@ -1,6 +1,6 @@
-export default function TaskItem({ task, onToggleDone }) {
-  const id = task._id;   // FIXED
-
+export default function TaskItem({ task, onToggleDone, onDelete }) {
+  const id = task._id;
+  
   return (
     <li className={`task-item ${task.status}`}>
       <input
@@ -8,11 +8,17 @@ export default function TaskItem({ task, onToggleDone }) {
         checked={task.status === "done"}
         onChange={() => onToggleDone(id)}
       />
-
-      <div>
+      <div className="task-content">
         <strong>{task.title}</strong>
         <span className="status">({task.status})</span>
       </div>
+      <button 
+        className="delete-btn" 
+        onClick={() => onDelete(id)}
+        aria-label="Delete task"
+      >
+        Delete
+      </button>
     </li>
   );
 }
