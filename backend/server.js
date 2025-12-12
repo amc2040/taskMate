@@ -10,14 +10,21 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 const PORT = process.env.PORT || 5000;
 const app = express();
+
 connectDB();
+
 app.use(express.json());
 app.use(cors());
+
 app.get('/', (req, res) => {
-  res.json({ status: 'ok', message: 'taskMate backend running' });});
+  res.json({ status: 'ok', message: 'taskMate backend running' });
+});
+
 app.use('/api/tasks', taskRoutes);
+
 app.use(notFound);
 app.use(errorHandler);
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
