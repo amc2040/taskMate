@@ -52,33 +52,6 @@ function TasksPage({ tasks, filter, setFilter, onAddTask, onToggleDone, onDelete
   );
 }
 
-// About Page Component
-function AboutPage() {
-  return (
-    <div className="about-page">
-      <h2>About taskMate</h2>
-      <p>
-        taskMate is a full-stack MERN application developed as a team project to demonstrate
-        modern web development skills.
-      </p>
-      <h3>Technology Stack:</h3>
-      <ul>
-        <li><strong>MongoDB:</strong> Database for storing tasks</li>
-        <li><strong>Express:</strong> Backend framework for RESTful API</li>
-        <li><strong>React:</strong> Frontend library for UI</li>
-        <li><strong>Node.js:</strong> Runtime environment</li>
-      </ul>
-      <h3>Team Members:</h3>
-      <ul>
-        <li><strong>Jenna Roberds:</strong> Frontend (React)</li>
-        <li><strong>Zoey Benedict:</strong> Backend (Node/Express)</li>
-        <li><strong>Amber Carr:</strong> Database (MongoDB)</li>
-        <li><strong>Dylan Peel:</strong> Presentation/Documentation</li>
-      </ul>
-    </div>
-  );
-}
-
 // Main App Component
 export default function App() {
   const [tasks, setTasks] = useState([]);
@@ -165,14 +138,6 @@ export default function App() {
                   Tasks
                 </NavLink>
               </li>
-              <li>
-                <NavLink 
-                  to="/about" 
-                  className={({ isActive }) => isActive ? "nav-link active" : "nav-link"}
-                >
-                  About
-                </NavLink>
-              </li>
             </ul>
           </div>
         </nav>
@@ -197,7 +162,6 @@ export default function App() {
                   />
                 } 
               />
-              <Route path="/about" element={<AboutPage />} />
             </Routes>
           )}
         </div>
